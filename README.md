@@ -1,5 +1,8 @@
 # WireGuard Easy
 
+> NOTE: This chart is forked from hansehe's one ([Artifact HUB](https://artifacthub.io/packages/search?repo=wg-easy), [GitHub](https://github.com/hansehe/wg-easy-helm))
+> Use `https://raw.githubusercontent.com/haeramkeem/wg-easy-helm/main/helm/charts` for repo URL to use forked one
+
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/wg-easy)](https://artifacthub.io/packages/search?repo=wg-easy)
 
 The WireGuard Easy deploys a vpn solution, check out:

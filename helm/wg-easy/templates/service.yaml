@@ -17,10 +17,16 @@ spec:
       targetPort: udp-vpn
       protocol: UDP
       name: udp-vpn
+      {{- if eq .Values.service.type "NodePort" }}
+      nodePort: 31820
+      {{- end }}
     - port: 51821
       targetPort: http-ui
       protocol: TCP
       name: http-ui
+      {{- if eq .Values.service.type "NodePort" }}
+      nodePort: 31821
+      {{- end }}
   selector:
     {{- include "wg-easy.selectorLabels" . | nindent 4 }}
 {{- end }}
