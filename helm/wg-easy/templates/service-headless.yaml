@@ -13,11 +13,11 @@ metadata:
 spec:
   clusterIP: None
   ports:
-    - port: 51820
+    - port: {{ .Values.service.port.vpn }}
       targetPort: udp-vpn
       protocol: UDP
       name: udp-vpn
-    - port: 51821
+    - port: {{ .Values.service.port.ui }}
       targetPort: http-ui
       protocol: TCP
       name: http-ui

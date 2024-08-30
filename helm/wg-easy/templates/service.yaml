@@ -13,19 +13,19 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: 51820
+    - port: {{ .Values.service.port.vpn }}
       targetPort: udp-vpn
       protocol: UDP
       name: udp-vpn
       {{- if eq .Values.service.type "NodePort" }}
-      nodePort: 31820
+      nodePort: {{ .Values.service.nodePort.vpn }}
       {{- end }}
-    - port: 51821
+    - port: {{ .Values.service.port.ui }}
       targetPort: http-ui
       protocol: TCP
       name: http-ui
       {{- if eq .Values.service.type "NodePort" }}
-      nodePort: 31821
+      nodePort: {{ .Values.service.nodePort.ui }}
       {{- end }}
   selector:
     {{- include "wg-easy.selectorLabels" . | nindent 4 }}

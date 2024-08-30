@@ -43,10 +43,10 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: udp-vpn
-              containerPort: 51820
+              containerPort: {{ .Values.service.containerPort.vpn }}
               protocol: UDP
             - name: http-ui
-              containerPort: 51821
+              containerPort: {{ .Values.service.containerPort.ui }}
               protocol: TCP
           {{- if .Values.volume.enabled }}
           volumeMounts:
@@ -76,6 +76,12 @@ spec:
           - name: COLLECTOR_ZIPKIN_HOST_PORT
             value: ":9411"
           {{- end }}
+          - name: PORT
+            value: "{{ .Values.service.containerPort.ui }}"
+          - name: WG_PORT
+            value: "{{ .Values.service.containerPort.vpn }}"
+          - name: WG_CONFIG_PORT
+            value: "{{ .Values.service.containerPort.vpn }}"
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

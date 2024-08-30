@@ -45,12 +45,20 @@ securityContext:
 
 service:
   type: ClusterIP
-  port: 51821
+  port:
+    vpn: 51821
+    ui: 51820
   annotations:
     prometheus.io/probe: "true"
     prometheus.io/probe-path: "/"
   headless:
     annotations: {}
+  containerPort:
+    vpn: 51821
+    ui: 51820
+  nodePort:
+    vpn: 31821
+    ui: 31820
 
 ingress:
   enabled: false
