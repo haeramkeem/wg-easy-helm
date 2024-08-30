@@ -77,11 +77,17 @@ spec:
             value: ":9411"
           {{- end }}
           - name: PORT
-            value: "{{ .Values.service.containerPort.ui }}"
+            value: {{ .Values.service.containerPort.ui | quote }}
           - name: WG_PORT
-            value: "{{ .Values.service.containerPort.vpn }}"
+            value: {{ .Values.service.containerPort.vpn | quote }}
           - name: WG_CONFIG_PORT
-            value: "{{ .Values.service.containerPort.vpn }}"
+            value: {{ .Values.service.containerPort.vpn | quote }}
+          - name: WEBUI_HOST
+            value: "0.0.0.0"
+          {{- range .Values.ingress.hosts }}
+          - name: WG_HOST
+            value: {{ .host | quote }}
+          {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

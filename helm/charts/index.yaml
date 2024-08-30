@@ -2,8 +2,28 @@ apiVersion: v1
 entries:
   wg-easy:
   - apiVersion: v2
+    appVersion: "13"
+    created: "2024-08-30T23:12:28.9349+09:00"
+    description: Wireguard Easy helm chart for Kubernetes
+    digest: 021e982086274c11271326fa8523d57d047d674bed5825af568493bcdb30c817
+    home: https://github.com/hansehe/wg-easy-helm
+    icon: https://raw.githubusercontent.com/hansehe/wg-easy-helm/master/helm/wireguard.png
+    keywords:
+    - wireguard
+    - wg-easy
+    maintainers:
+    - email: hans.erik.heggem@gmail.com
+      name: hansehe
+    name: wg-easy
+    sources:
+    - https://github.com/hansehe/wg-easy-helm
+    type: application
+    urls:
+    - wg-easy-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
     appVersion: "9"
-    created: "2024-08-30T21:07:08.420096+09:00"
+    created: "2024-08-30T23:12:28.934211+09:00"
     description: Wireguard Easy helm chart for Kubernetes
     digest: 81fa885905c2ca6baf3948dd607f7fe36e3faac8e3e0f3d5a0171b55053c8677
     home: https://github.com/hansehe/wg-easy-helm
@@ -23,7 +43,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: "9"
-    created: "2024-08-30T21:07:08.41963+09:00"
+    created: "2024-08-30T23:12:28.933578+09:00"
     description: Wireguard Easy helm chart for Kubernetes
     digest: 226241ea4c1fadc76fe8a73f140a39ba32f240a9008181e995100870263c22f2
     home: https://github.com/hansehe/wg-easy-helm
@@ -43,7 +63,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: "9"
-    created: "2024-08-30T21:07:08.419279+09:00"
+    created: "2024-08-30T23:12:28.930093+09:00"
     description: Wireguard Easy helm chart for Kubernetes
     digest: 016e20a07e428bd2750f48da72183f7425489b91cdfd178118f4b0e3739ae8e1
     home: https://github.com/hansehe/wg-easy-helm
@@ -61,4 +81,4 @@ entries:
     urls:
     - wg-easy-0.1.0.tgz
     version: 0.1.0
-generated: "2024-08-30T21:07:08.415914+09:00"
+generated: "2024-08-30T23:12:28.928756+09:00"
